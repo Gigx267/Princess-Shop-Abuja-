@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Basic -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Princess Shop Abuja | Luxury Fashion Boutique</title>
+    <meta name="keywords" content="luxury fashion, designer clothes, Abuja boutique, women's clothing, premium dresses, high-end bags">
+    <meta name="description" content="Abuja's premier luxury fashion destination offering exquisite designer clothing, handbags, shoes and accessories for the sophisticated woman.">
+    <meta name="author" content="Princess Shop Abuja">
 
-    <!-- Site Metas -->
-    <title>Princess Shop Abuja </title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Site Icons -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="logo.PNG" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
@@ -28,8 +31,283 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
-  
-
+    <style>
+        :root {
+            --primary-color: #d4af8f;
+            --secondary-color: #8b6b5e;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f5f2;
+            --accent-color: #c0a080;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .main-top {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .main-header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand img {
+            height: 70px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: var(--dark-color) !important;
+            padding: 10px 20px !important;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 5px;
+            left: 20px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: calc(100% - 40px);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .cover-slides {
+            height: 90vh;
+            min-height: 600px;
+        }
+        
+        .cover-slides .slides-container li:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .cover-slides h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+        
+        .categories-shop {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .shop-cat-box {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .shop-cat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .shop-cat-box img {
+            transition: all 0.5s ease;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .shop-cat-box:hover img {
+            transform: scale(1.05);
+        }
+        
+        .btn.hvr-hover {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 0;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn.hvr-hover:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .instagram-box {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .ins-inner-box {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ins-inner-box img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .hov-in {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 175, 143, 0.7);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .ins-inner-box:hover .hov-in {
+            opacity: 1;
+        }
+        
+        .hov-in a {
+            color: white;
+            font-size: 2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 80px 0 0;
+        }
+        
+        .footer-widget h4, .footer-link h4, .footer-link-contact h4 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-widget h4:after, .footer-link h4:after, .footer-link-contact h4:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-widget p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-link ul li a {
+            color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-link-contact ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-link-contact ul li i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .footer-copyright {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .footer-company {
+            margin: 0;
+            color: var(--light-color);
+        }
+        
+        .footer-company a {
+            color: var(--primary-color);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .cover-slides h1 {
+                font-size: 3rem;
+            }
+            
+            .nav-link {
+                padding: 8px 15px !important;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .cover-slides {
+                height: 70vh;
+                min-height: 500px;
+            }
+            
+            .cover-slides h1 {
+                font-size: 2.5rem;
+            }
+            
+            .shop-cat-box img {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .cover-slides h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -43,49 +321,26 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> Welcome To Princess 
+                                    <i class="fas fa-crown"></i> Welcome To Princess - Abuja's Premier Luxury Boutique
                                 </li>
                                 <li>
-                                    <i class="fab fa-opencart"></i>Abuja No1 Luxury Fashion Store 
+                                    <i class="fas fa-star"></i> Exclusive Designer Collections Now Available
                                 </li>
                                 <li>
-                                    <i class="fab fa-opencart"></i> Where Style Meets Elegance 
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Find us in Abuja 
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Welcome To Princess 
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Find us in Abuja 
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Where Style Meets Elegance 
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Abuja No1 Luxury Fashion Store 
+                                    <i class="fas fa-heart"></i> Where Style Meets Elegance
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="payment Methods ">
-						<option> Message Us </option>
-						<option>Call Us </option>
-						<option>Whatsapp US </option>
-					</select>
-                    </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +08033109231</a></p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+08033109231">+080 3310 9231</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="contact-us.html">Find Us </a></li>
-                            <li><a href="contact-us.html">Our location</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="contact-us.html"><i class="fas fa-map-marker-alt"></i> Find Us</a></li>
+                            <li><a href="contact-us.html"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,7 +349,7 @@
     </div>
     <!-- End Main Top -->
 
-    <!-- Start Main Top -->
+    <!-- Start Main Header -->
     <header class="main-header">
         <!-- Start Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
@@ -102,9 +357,11 @@
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="index.html"><img style="height: 3.2em; border-radius: 50%; width: 5em; opacity: 80%;"     src="logo.PNG"  class="logo" alt=""></a>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="logo.PNG" class="logo" alt="Princess Shop Abuja">
+                    </a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -112,75 +369,63 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us  </a></li>
-                        <li class="nav-item"><a class="nav-link" href="bags.html">Bags </a></li>
-                        <li class="nav-item"><a class="nav-link" href="shoes.html">Shoes </a></li>
-                        <li class="nav-item"><a class="nav-link" href="Dresses.html">Dresses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="wallets.html">Wallets </a></li>
-                        <li class="nav-item"><a class="nav-link" href="Frangence.html">Perfume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us </a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Collections</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="bags.html">Luxury Handbags</a></li>
+                                <li><a class="dropdown-item" href="shoes.html">Designer Shoes</a></li>
+                                <li><a class="dropdown-item" href="Dresses.html">Evening Dresses</a></li>
+                                <li><a class="dropdown-item" href="wallets.html">Wallets & Accessories</a></li>
+                                <li><a class="dropdown-item" href="Frangence.html">Perfumes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    </ul>
                 </div>
                 <!-- /.navbar-collapse -->
-
-              
+            </div>
         </nav>
         <!-- End Navigation -->
     </header>
-    <!-- End Main Top -->
-
-    <!-- Start Top Search -->
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Search -->
+    <!-- End Main Header -->
 
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
             <li class="text-center">
-               
-                            <img src="a1 (2).jpg" alt="">
-                            <div class="container">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h1 class="m-b-20"><strong>Fashion Meets Luxury </strong></h1>
-                                            <p class="m-b-60"><small> </small> </p>
-                           
+                <img src="a1 (2).jpg" alt="Luxury Fashion Collection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Fashion Meets Luxury</h1>
+                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">Discover our exclusive designer collections</p>
+                            <a href="Dresses.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">Shop Now</a>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="text-center">
-             
-                <img src="p1 (79).jpg" alt="">
+                <img src="p1 (79).jpg" alt="Designer Dresses">
                 <div class="container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h1 class="m-b-20"><strong> 
-                                    Every Occasion<br>
-                                     Every Woman</strong></h1>
-                                <p class="m-b-60"><small> </small> </p>
-                           
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Every Occasion, Every Woman</h1>
+                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">Curated for the modern princess</p>
+                            <a href="Dresses.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">Explore Dresses</a>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="text-center">
-                <img src="p1 (15).jpg" alt="">
+                <img src="p1 (15).jpg" alt="Luxury Accessories">
                 <div class="container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h1 class="m-b-20"><strong>Dress Like <br>Royalty </strong></h1>
-                                <p class="m-b-60"><small> </small> </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Dress Like Royalty</h1>
+                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">The finest selection of luxury fashion</p>
+                            <a href="bags.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">View Collection</a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -192,39 +437,50 @@
     </div>
     <!-- End Slider -->
 
-    <!-- Start Categories  -->
+    <!-- Start Categories -->
     <div class="categories-shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2>Our Luxury Collections</h2>
+                    <p class="lead">Explore our carefully curated selection of premium fashion</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="p1 (86).jpg" alt="" />
-                        <a class="btn hvr-hover" href="bags.html">Bags </a>
-                    </div>
-                    <div class="shop-cat-box">
-                       <img class="img-fluid" src="k1 (38).jpg" alt="" />
-                        <a class="btn hvr-hover" href="shoes.html">Shoes  <br>
-                        </a>
+                        <img class="img-fluid" src="p1 (86).jpg" alt="Designer Handbags" />
+                        <a class="btn hvr-hover" href="bags.html">Luxury Handbags</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="p1 (42).jpg" alt="" />
-                        <a class="btn hvr-hover" href="Dresses.html">Shirts</a>
-                    </div>
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (1).jpg" alt="" />
-                        <a class="btn hvr-hover" href="Dresses.html">Dresses</a>
+                        <img class="img-fluid" src="k1 (38).jpg" alt="Designer Shoes" />
+                        <a class="btn hvr-hover" href="shoes.html">Designer Shoes</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (18).jpg" alt="" />
-                        <a class="btn hvr-hover" href="Frangence.html">Perfumes</a>
+                        <img class="img-fluid" src="p1 (42).jpg" alt="Evening Dresses" />
+                        <a class="btn hvr-hover" href="Dresses.html">Evening Dresses</a>
                     </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (15).jpg" alt="" />
-                        <a class="btn hvr-hover" href="wallets.html">Wallets </a>
+                        <img class="img-fluid" src="a1 (1).jpg" alt="Casual Wear" />
+                        <a class="btn hvr-hover" href="Dresses.html">Casual Wear</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="a1 (18).jpg" alt="Luxury Perfumes" />
+                        <a class="btn hvr-hover" href="Frangence.html">Luxury Perfumes</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="a1 (15).jpg" alt="Wallets & Accessories" />
+                        <a class="btn hvr-hover" href="wallets.html">Wallets & Accessories</a>
                     </div>
                 </div>
             </div>
@@ -232,16 +488,20 @@
     </div>
     <!-- End Categories -->
 
-   
-
-   
-
-    <!-- Start Instagram Feed  -->
+    <!-- Start Instagram Feed -->
     <div class="instagram-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2>Follow Our Style</h2>
+                    <p class="lead">@PrincessShopAbuja</p>
+                </div>
+            </div>
+        </div>
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (11).jpg" alt="" />
+                    <img src="p1 (11).jpg" alt="Fashion Inspiration" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -249,7 +509,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (16).jpg" alt="" />
+                    <img src="p1 (16).jpg" alt="New Arrivals" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -257,7 +517,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (18).jpg" alt="" />
+                    <img src="p1 (18).jpg" alt="Luxury Fashion" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -265,7 +525,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (13).jpg" alt="" />
+                    <img src="p1 (13).jpg" alt="Designer Collection" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -273,7 +533,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (25).jpg" alt="" />
+                    <img src="p1 (25).jpg" alt="Fashion Trends" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -281,39 +541,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="p1 (70).jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (91).jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (95).jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (53).jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (54).jpg" alt="" />
+                    <img src="p1 (70).jpg" alt="Style Inspiration" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -321,10 +549,9 @@
             </div>
         </div>
     </div>
-    <!-- End Instagram Feed  -->
+    <!-- End Instagram Feed -->
 
-
-    <!-- Start Footer  -->
+    <!-- Start Footer -->
     <footer>
         <div class="footer-main">
             <div class="container">
@@ -332,27 +559,24 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>About Princess</h4>
-                            <p>
-
-                                Proudly showcasing the best female clothing brands from across the globe to you, Princess Clothing Store
-                                 stands as a gate way to the glamour in the world of women's fashion brining the best clothing garments from around the world,
-                                  Princess Female Clothing Store showcases a diverse range of styles that cater to every taste and occasion.
-                                 We are on a mission to be able make every woman feel like a princess by offering clothing that exudes luxury for which royalty wears
-                                </p>
-                            <ul>
-                              
-                            </ul>
+                            <p>Abuja's premier luxury fashion destination, Princess brings you the finest designer collections from around the world. We are committed to making every woman feel like royalty by offering exquisite clothing and accessories that embody elegance and sophistication.</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
-                            <h4>Pages </h4>
+                            <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="index.html">Home </a></li>
-                                <li><a href="about.html">About Us </a></li>
-                            
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="bags.html">Collections</a></li>
                                 <li><a href="contact-us.html">Contact Us</a></li>
-                                
+                                <li><a href="contact-us.html">Store Location</a></li>
                             </ul>
                         </div>
                     </div>
@@ -361,13 +585,16 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Manhattan Mall, Plot 919 4th Ave,<br> Gwarinpa Estate 900108, Kubwa,<br> Federal Capital Territory  </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Manhattan Mall, Plot 919 4th Ave,<br> Gwarinpa Estate 900108, Kubwa,<br> Federal Capital Territory</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">08033109231</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+08033109231">080 3310 9231</a></p>
                                 </li>
                                 <li>
-
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:info@princessshopabuja.com">info@princessshopabuja.com</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-clock"></i>Opening Hours: Mon-Sat 9:00 AM - 7:00 PM</p>
                                 </li>
                             </ul>
                         </div>
@@ -376,16 +603,15 @@
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
+    <!-- End Footer -->
 
-    <!-- Start copyright  -->
+    <!-- Start Copyright -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy;  <a href="#">Princess</a> 
-            </a></p>
+        <p class="footer-company">All Rights Reserved. &copy; 2023 <a href="#">Princess Shop Abuja</a> | Luxury Fashion Boutique</p>
     </div>
-    <!-- End copyright  -->
+    <!-- End Copyright -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-arrow-up"></i></a>
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -395,7 +621,7 @@
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/inewsticker.js"></script>
-    <script src="js/bootsnav.js."></script>
+    <script src="js/bootsnav.js"></script>
     <script src="js/images-loded.min.js"></script>
     <script src="js/isotope.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -403,6 +629,26 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    
+    <script>
+        // Animate elements when they come into view
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            
+            // Initialize tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
-
 </html>

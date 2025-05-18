@@ -1,654 +1,924 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princess | Abuja's Luxury Fashion Gateway</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    :root {
+      --ivory: #FFF8F8;
+      --light-red: #FFD6DC;
+      --passionate-red: #F45C5C;
+      --deep-red: #C1121F;
+      --gold: #D4AF37;
+      --charcoal: #232323;
+      --rose-petal: #FFF0F3;
+      --white: #fff;
+      --dark-charcoal: #1a1a1a;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
     
-    <title>Princess Shop Abuja | Luxury Fashion Boutique</title>
-    <meta name="keywords" content="luxury fashion, designer clothes, Abuja boutique, women's clothing, premium dresses, high-end bags">
-    <meta name="description" content="Abuja's premier luxury fashion destination offering exquisite designer clothing, handbags, shoes and accessories for the sophisticated woman.">
-    <meta name="author" content="Princess Shop Abuja">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="logo.PNG" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-
-    <style>
-        :root {
-            --primary-color: #d4af8f;
-            --secondary-color: #8b6b5e;
-            --dark-color: #1a1a1a;
-            --light-color: #f8f5f2;
-            --accent-color: #c0a080;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-color);
-            background-color: var(--light-color);
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        
-        .main-top {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            padding: 8px 0;
-            font-size: 0.9rem;
-        }
-        
-        .main-header {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand img {
-            height: 70px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            color: var(--dark-color) !important;
-            padding: 10px 20px !important;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 5px;
-            left: 20px;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: calc(100% - 40px);
-        }
-        
-        .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-        
-        .cover-slides {
-            height: 90vh;
-            min-height: 600px;
-        }
-        
-        .cover-slides .slides-container li:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-        }
-        
-        .cover-slides h1 {
-            font-size: 4rem;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
-        }
-        
-        .categories-shop {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-        
-        .shop-cat-box {
-            position: relative;
-            margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .shop-cat-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .shop-cat-box img {
-            transition: all 0.5s ease;
-            height: 300px;
-            object-fit: cover;
-        }
-        
-        .shop-cat-box:hover img {
-            transform: scale(1.05);
-        }
-        
-        .btn.hvr-hover {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            border-radius: 0;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn.hvr-hover:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .instagram-box {
-            background-color: var(--light-color);
-            padding: 80px 0;
-        }
-        
-        .ins-inner-box {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ins-inner-box img {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-        
-        .hov-in {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(212, 175, 143, 0.7);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .ins-inner-box:hover .hov-in {
-            opacity: 1;
-        }
-        
-        .hov-in a {
-            color: white;
-            font-size: 2rem;
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            padding: 80px 0 0;
-        }
-        
-        .footer-widget h4, .footer-link h4, .footer-link-contact h4 {
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-widget h4:after, .footer-link h4:after, .footer-link-contact h4:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-        
-        .footer-widget p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .footer-link ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-link ul li a {
-            color: var(--light-color);
-            transition: all 0.3s ease;
-        }
-        
-        .footer-link ul li a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-        
-        .footer-link-contact ul li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .footer-link-contact ul li i {
-            margin-right: 15px;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-top: 3px;
-        }
-        
-        .footer-copyright {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        .footer-company {
-            margin: 0;
-            color: var(--light-color);
-        }
-        
-        .footer-company a {
-            color: var(--primary-color);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 991px) {
-            .cover-slides h1 {
-                font-size: 3rem;
-            }
-            
-            .nav-link {
-                padding: 8px 15px !important;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .cover-slides {
-                height: 70vh;
-                min-height: 500px;
-            }
-            
-            .cover-slides h1 {
-                font-size: 2.5rem;
-            }
-            
-            .shop-cat-box img {
-                height: 250px;
-            }
-        }
-        
-        @media (max-width: 575px) {
-            .cover-slides h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--charcoal);
+      background-color: var(--ivory);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, var(--deep-red) 0%, var(--passionate-red) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(193, 18, 31, 0.2);
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--passionate-red) 0%, var(--deep-red) 100%);
+      z-index: -1;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+    
+    .section {
+      padding: 6rem 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      color: var(--deep-red);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--deep-red));
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      opacity: 0.9;
+    }
+    
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+    }
+    
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--deep-red);
+      letter-spacing: 1px;
+    }
+    
+    .logo-sub {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: -2px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .nav-list {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: var(--transition);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-link:hover {
+      color: var(--deep-red);
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--white);
+      min-width: 220px;
+      padding: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+      z-index: 100;
+    }
+    
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .dropdown-item:hover {
+      background-color: var(--light-red);
+      color: var(--deep-red);
+      padding-left: 1.8rem;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--deep-red);
+      cursor: pointer;
+    }
+    
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 80px;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+      z-index: 1;
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      color: var(--white);
+      padding: 0 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-text {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+    
+    /* COLLECTIONS SECTION */
+    .collections {
+      background-color: var(--white);
+    }
+    
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .collection-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+    
+    .collection-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .collection-img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+    
+    .collection-card:hover .collection-img {
+      transform: scale(1.05);
+    }
+    
+    .collection-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      color: var(--white);
+    }
+    
+    .collection-name {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .collection-origin {
+      font-style: italic;
+      opacity: 0.8;
+    }
+    
+    /* FEATURED SECTION */
+    .featured {
+      background-color: var(--rose-petal);
+    }
+    
+    .featured-container {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    
+    .featured-img {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .featured-img img {
+      width: 100%;
+      height: auto;
+      transition: transform 1s ease;
+    }
+    
+    .featured-img:hover img {
+      transform: scale(1.05);
+    }
+    
+    .featured-content {
+      flex: 1;
+    }
+    
+    .featured-title {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--deep-red);
+    }
+    
+    .featured-text {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    /* TESTIMONIALS */
+    .testimonials {
+      background-color: var(--deep-red);
+      color: var(--white);
+    }
+    
+    .testimonials .section-title {
+      color: var(--white);
+    }
+    
+    .testimonials .section-title::after {
+      background: linear-gradient(90deg, var(--gold), var(--white));
+    }
+    
+    .testimonial-slider {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .testimonial {
+      padding: 2rem;
+    }
+    
+    .testimonial-text {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .testimonial-text::before,
+    .testimonial-text::after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--gold);
+      opacity: 0.3;
+      position: absolute;
+    }
+    
+    .testimonial-text::before {
+      top: -20px;
+      left: -20px;
+    }
+    
+    .testimonial-text::after {
+      bottom: -40px;
+      right: -20px;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    
+    .testimonial-role {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    /* NEWSLETTER */
+    .newsletter {
+      background-color: var(--charcoal);
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    
+    .newsletter-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .newsletter-text {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.8;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      border-radius: 50px 0 0 50px;
+      font-size: 1rem;
+    }
+    
+    .newsletter-btn {
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, var(--gold), var(--passionate-red));
+      color: var(--white);
+      border: none;
+      border-radius: 0 50px 50px 0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .newsletter-btn:hover {
+      opacity: 0.9;
+    }
+    
+    /* FOOTER */
+    .footer {
+      background-color: var(--dark-charcoal);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-col h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--passionate-red));
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-link {
+      margin-bottom: 0.8rem;
+      transition: var(--transition);
+    }
+    
+    .footer-link a {
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    
+    .footer-link a:hover {
+      opacity: 1;
+      color: var(--gold);
+      padding-left: 5px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    
+    .social-link:hover {
+      background-color: var(--gold);
+      color: var(--dark-charcoal);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+      .section {
+        padding: 4rem 0;
+      }
+      
+      .featured-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .featured-img,
+      .featured-content {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        z-index: 999;
+      }
+      
+      .navbar-menu.active {
+        left: 0;
+      }
+      
+      .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0.5rem 0;
+        display: none;
+      }
+      
+      .nav-item:hover .dropdown-menu {
+        display: block;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-text {
+        font-size: 1rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-input {
+        border-radius: 50px;
+        margin-bottom: 1rem;
+      }
+      
+      .newsletter-btn {
+        border-radius: 50px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-    <!-- Start Main Top -->
-    <div class="main-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="text-slid-box">
-                        <div id="offer-box" class="carouselTicker">
-                            <ul class="offer-box">
-                                <li>
-                                    <i class="fas fa-crown"></i> Welcome To Princess - Abuja's Premier Luxury Boutique
-                                </li>
-                                <li>
-                                    <i class="fas fa-star"></i> Exclusive Designer Collections Now Available
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i> Where Style Meets Elegance
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="right-phone-box">
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+08033109231">+080 3310 9231</a></p>
-                    </div>
-                    <div class="our-link">
-                        <ul>
-                            <li><a href="contact-us.html"><i class="fas fa-map-marker-alt"></i> Find Us</a></li>
-                            <li><a href="contact-us.html"><i class="fas fa-headset"></i> Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Main Top -->
-
-    <!-- Start Main Header -->
-    <header class="main-header">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
-            <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="logo.PNG" class="logo" alt="Princess Shop Abuja">
-                    </a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Collections</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="bags.html">Luxury Handbags</a></li>
-                                <li><a class="dropdown-item" href="shoes.html">Designer Shoes</a></li>
-                                <li><a class="dropdown-item" href="Dresses.html">Evening Dresses</a></li>
-                                <li><a class="dropdown-item" href="wallets.html">Wallets & Accessories</a></li>
-                                <li><a class="dropdown-item" href="Frangence.html">Perfumes</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-        </nav>
-        <!-- End Navigation -->
-    </header>
-    <!-- End Main Header -->
-
-   <!-- Start Slider -->
-    <div id="slides-shop" class="cover-slides">
-        <ul class="slides-container">
-            <li class="text-center">
-                <img src="https://assets.hermes.com/is/image/hermesproduct/252190Z%2020_front_wm_1?size=3000,3000&extend=0,0,0,0&align=0,0&$product_item_grid_g$&wid=700&hei=700 " alt="Luxury Fashion Collection">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Fashion Meets Luxury</h1>
-                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">Discover our exclusive designer collections</p>
-                            <a href="Dresses.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="https://bottega-veneta.dam.kering.com/m/7b6bc3b655a8e61d/Large-766014VCPP17225_A.jpg?v=1 " alt="Designer Dresses">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Every Occasion, Every Woman</h1>
-                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">Curated for the modern princess</p>
-                            <a href="Dresses.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">Explore Dresses</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="https://www.prada.com/content/dam/pradanux/e-commerce/2025/05/Rotation_May_Issue/Woman/Collection/editorials_1x1/3/Editorial_1x1_DT.jpg" alt="Luxury Accessories">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20 animate__animated animate__fadeInDown">Dress Like Royalty</h1>
-                            <p class="m-b-40 animate__animated animate__fadeInUp animate__delay-1s">The finest selection of luxury fashion</p>
-                            <a href="bags.html" class="btn btn-lg btn-light animate__animated animate__fadeInUp animate__delay-2s">View Collection</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        PRINCESS
+        <span class="logo-sub">ABUJA</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Collections <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="bags.html">Luxury Handbags</a></li>
+              <li class="dropdown-item"><a href="shoes.html">Designer Shoes</a></li>
+              <li class="dropdown-item"><a href="dresses.html">Evening Dresses</a></li>
+              <li class="dropdown-item"><a href="wallets.html">Wallets & Accessories</a></li>
+              <li class="dropdown-item"><a href="fragrance.html">Perfumes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="slides-navigation">
-            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-        </div>
+      </div>
     </div>
-    <!-- End Slider -->
+  </nav>
 
-    <!-- Start Categories -->
-    <div class="categories-shop">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2>Our Luxury Collections</h2>
-                    <p class="lead">Explore our carefully curated selection of premium fashion</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="p1 (86).jpg" alt="Designer Handbags" />
-                        <a class="btn hvr-hover" href="bags.html">Luxury Handbags</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="k1 (38).jpg" alt="Designer Shoes" />
-                        <a class="btn hvr-hover" href="shoes.html">Designer Shoes</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="p1 (42).jpg" alt="Evening Dresses" />
-                        <a class="btn hvr-hover" href="Dresses.html">Evening Dresses</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (1).jpg" alt="Casual Wear" />
-                        <a class="btn hvr-hover" href="Dresses.html">Casual Wear</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (18).jpg" alt="Luxury Perfumes" />
-                        <a class="btn hvr-hover" href="Frangence.html">Luxury Perfumes</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="a1 (15).jpg" alt="Wallets & Accessories" />
-                        <a class="btn hvr-hover" href="wallets.html">Wallets & Accessories</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Categories -->
-
-    <!-- Start Instagram Feed -->
-    <div class="instagram-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2>Follow Our Style</h2>
-                    <p class="lead">@PrincessShopAbuja</p>
-                </div>
-            </div>
-        </div>
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (11).jpg" alt="Fashion Inspiration" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (16).jpg" alt="New Arrivals" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (18).jpg" alt="Luxury Fashion" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (13).jpg" alt="Designer Collection" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (25).jpg" alt="Fashion Trends" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="p1 (70).jpg" alt="Style Inspiration" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Instagram Feed -->
-
-    <!-- Start Footer -->
-    <footer>
-        <div class="footer-main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-widget">
-                            <h4>About Princess</h4>
-                            <p>Abuja's premier luxury fashion destination, Princess brings you the finest designer collections from around the world. We are committed to making every woman feel like royalty by offering exquisite clothing and accessories that embody elegance and sophistication.</p>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link">
-                            <h4>Quick Links</h4>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="bags.html">Collections</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                                <li><a href="contact-us.html">Store Location</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Manhattan Mall, Plot 919 4th Ave,<br> Gwarinpa Estate 900108, Kubwa,<br> Federal Capital Territory</p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+08033109231">080 3310 9231</a></p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:info@princessshopabuja.com">info@princessshopabuja.com</a></p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-clock"></i>Opening Hours: Mon-Sat 9:00 AM - 7:00 PM</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
-
-    <!-- Start Copyright -->
-    <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2023 <a href="#">Princess Shop Abuja</a> | Luxury Fashion Boutique</p>
-    </div>
-    <!-- End Copyright -->
-
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-arrow-up"></i></a>
-
-    <!-- ALL JS FILES -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/jquery.superslides.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/inewsticker.js"></script>
-    <script src="js/bootsnav.js"></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/custom.js"></script>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://cdn.pixabay.com/video/2025/03/21/266436_tiny.mp4 " type="video/mp4">
+    </video>
     
-    <script>
-        // Animate elements when they come into view
-        $(document).ready(function() {
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
-                }
-            });
-            
-            // Initialize tooltips
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+    <div class="container hero-content">
+      <h4 class="hero-subtitle">Abuja's Luxury Fashion Gateway</h4>
+      <h1 class="hero-title">Elevate Your Style With Timeless Elegance</h1>
+      <p class="hero-text">Discover exquisite collections from the world's most prestigious fashion houses, curated exclusively for Abuja's discerning clientele.</p>
+      <a href="collections.html" class="btn btn-primary">Explore Collections</a>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS SECTION -->
+  <section class="section collections">
+    <div class="container">
+      <h2 class="section-title">About Princess </h2>
+      <p class="section-subtitle">Princess Shop Abuja stands as the premier gateway to global luxury fashion in Nigeria's capital. We proudly curate the most exquisite female clothing brands and designer pieces from fashion capitals around the world, bringing Parisian elegance, Milanese sophistication, and New York edge to Abuja's discerning clientele.
+
+ we exist to crown every Nigerian woman with the regal fashion experience she deserves.  </p>
+      
+      <div class="collection-grid">
+        <div class="collection-card">
+          <img src="http://www.princess-shop-abuja.name.ng/a1%20(3).jpg " alt="" class="collection-img">
+          <div class="collection-overlay">
+            <h3 class="collection-name">Luxury Dresses </h3>
+            <p class="collection-origin">Chanel, Dior, Saint Laurent</p>
+          </div>
+        </div>
+        
+        <div class="collection-card">
+          <img src="http://www.princess-shop-abuja.name.ng/p1%20(49).jpg" alt="" class="collection-img">
+          <div class="collection-overlay">
+            <h3 class="collection-name"> Classy  Shoes </h3>
+            <p class="collection-origin">Prada, Gucci, Versace</p>
+          </div>
+        </div>
+        
+        <div class="collection-card">
+          <img src="http://www.princess-shop-abuja.name.ng/k1%20(14).jpg" alt="" class="collection-img">
+          <div class="collection-overlay">
+            <h3 class="collection-name">Classy Bags</h3>
+            <p class="collection-origin">designer pieces from  around the world </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter">
+    <div class="container">
+      <h3 class="newsletter-title">Join Our Exclusive Circle</h3>
+      <p class="newsletter-text">Subscribe to receive updates on new arrivals, private sales, and fashion events.</p>
+      
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Princess Shop</h3>
+          <p>Abuja's premier gateway to global luxury fashion. Crowned with excellence since 2015.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html">Home</a></li>
+            <li class="footer-link"><a href="about.html">About Us</a></li>
+            <li class="footer-link"><a href="collections.html">Collections</a></li>
+            <li class="footer-link"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="contact.html">Personal Styling</a></li>
+            <li class="footer-link"><a href="contact.html ">VIP Appointments</a></li>
+            <li class="footer-link"><a href="contact.html ">Wedding Consultations</a></li>
+            <li class="footer-link"><a href="contact.html">Corporate Wardrobing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">Manhattan Mall, Plot 919 4th Ave, Gwarinpa Estate 900108, Kubwa, Federal Capital Territory </a></li>
+            <li class="footer-link"><a href="tel:+2348033109231">+234  8033109231</a></li>
+
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Princess Shop Abuja. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navbarMenu = document.getElementById('navbar-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navbarMenu.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+        document.querySelector('.navbar').classList.remove('scrolled');
+      }
+    });
+    
+    // Simple Testimonial Slider
+    const testimonials = [
+      {
+        text: "Princess Shop transformed my entire wardrobe. Their stylists understood my needs perfectly and introduced me to pieces I never would have considered but now can't live without.",
+        author: "Amina Bello",
+        role: "CEO, Luxe Consulting"
+      },
+      {
+        text: "The quality and selection at Princess is unmatched in Abuja. I always find exactly what I'm looking for, and their service is impeccable.",
+        author: "Chioma Okonkwo",
+        role: "Fashion Editor"
+      },
+      {
+        text: "As a busy executive, I appreciate the personalized service. They know my style and send me curated selections that save me so much time.",
+        author: "Fatima Yusuf",
+        role: "Banking Executive"
+      }
+    ];
+    
+    let currentTestimonial = 0;
+    const testimonialElement = document.querySelector('.testimonial');
+    
+    function showTestimonial(index) {
+      const testimonial = testimonials[index];
+      testimonialElement.innerHTML = `
+        <p class="testimonial-text">${testimonial.text}</p>
+        <div class="testimonial-author">${testimonial.author}</div>
+        <div class="testimonial-role">${testimonial.role}</div>
+      `;
+    }
+    
+    // Rotate testimonials every 5 seconds
+    setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }, 5000);
+    
+    // Initialize first testimonial
+    showTestimonial(0);
+  </script>
 </body>
 </html>
